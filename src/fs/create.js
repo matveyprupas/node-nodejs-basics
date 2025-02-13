@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 const create = async () => {
-    const filePath = path.resolve('src/fs/files/fresh.txt');
+    const filePath = path.resolve('fs/files/fresh.txt');
 
     try {
         await fs.writeFile(filePath, 'I am fresh and young', {flag: 'wx'});
