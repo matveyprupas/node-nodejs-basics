@@ -10,6 +10,7 @@ const list = async () => {
         console.log(dirList.map((item) => item.name));
     } catch (err) {
         throw new Error('FS operation failed');
-    }};
+    }
+};
 
 await list();
