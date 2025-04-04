@@ -1,5 +1,9 @@
 const parseArgs = () => {
-    // Write your code here 
+    const envArgs = process.argv.filter(
+        ([key]) => !key.startsWith('/')
+    ).join(' is ').split(' is --').join(', ').split('--').join('');
+    
+    console.log( envArgs, );
 };
 
 parseArgs();
