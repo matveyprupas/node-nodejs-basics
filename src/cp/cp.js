@@ -1,9 +1,7 @@
 import { spawn } from 'child_process';
 
 const spawnChildProcess = async (args) => {
-    const spawnedProcess = spawn('node', ['cp/files/script.js', ...args], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-    });
+    const spawnedProcess = spawn('node', ['cp/files/script.js', ...args]);
 
     spawnedProcess.stdout.on('data', (data) => {
         console.log(`Child process stdout: ${data}`);
